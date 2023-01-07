@@ -1,36 +1,29 @@
 package TOB04;
-
 public class Pract_Here_Poli {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//Cliente cliente = new Cliente();	
-		//OJO
+		Cliente cliente = new Cliente();	
+		cliente.elNombre = "Robert M. Charpantier";
+		cliente.laEdad = 19;
+		cliente.elTelefono = 298854833;
+		cliente.credito=2.15;
 		
 		Trabajador trabajador = new Trabajador();
+		trabajador.salario = 3.14;
 		
-		trabajador.salario = 1500.42;
-		System.out.println(trabajador.salario);
+		System.out.println("Hola mi nombre es: "+cliente.elNombre+" Mi Edad es de: "+cliente.laEdad+" Años, y mi numero telefonico es: "+cliente.elTelefono+" Actualmente mi credito es de: "+cliente.credito+" y aspiro a un salario de: "+trabajador.salario);
 	}
 }
-
 class Persona {
-	
-	public String elNombre;
-	public int laEdad;
-	public float elTelefono;
+	String elNombre;
+	int laEdad;
+	int elTelefono;
 }
 
 class Cliente extends Persona{
-	public double credito;	
-	public void propiedades(String elNombre, int laEdad, float elTelefono, double credito) {
-		this.elNombre = "Robert M. Charpantier";
-		this.laEdad=19;
-		this.elTelefono=8854833;
-		credito=2.15;
-	}
+	double credito;	
 } 
 
 class Trabajador extends Persona{
-	public double salario;
+	double salario;
 }
